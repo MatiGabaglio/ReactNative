@@ -1,6 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Button} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import AddItem from './components/AddItem.js';
+import React from "react";
+import Modal from './components/Modal.js';
 
 export default function App() {
   return (
