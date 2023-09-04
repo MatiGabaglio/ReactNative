@@ -1,13 +1,21 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import AddItem from './components/AddItem.js';
+import React from "react";
+import Modal from './components/Modal.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text style = { {color: "white", fontSize: 42, fontFamily:"sans-serif-light"} }>
-        Hola, Coder!
-      </Text>
-      <StatusBar style="auto" />
+      <StatusBar
+        backgroundColor="#f2f2f2"  
+        barStyle="light-content"    
+        translucent={false}       
+      />
+      <Text style = { styles.titulo}> Lista de compras</Text>
+      <View>
+        <AddItem/>
+      </View>
     </View>
   );
 }
@@ -15,8 +23,15 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#2c3e50",
+    backgroundColor: "#f2f2f2",
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'top',
+  },
+  titulo: {
+    color: "#242424",
+    fontSize: 42,
+    fontFamily:"sans-serif-light",
+    paddingTop: 30,
+    fontWeight: 'bold',
   },
 });
