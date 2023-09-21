@@ -16,14 +16,14 @@ export default function AddItem(){
     setTextValue('');
   }
 
-  //····················· ITEM STATE  ························//
+  //····················· ITEM STATE ························//
   const [itemState, setItemState] = useState(false);
 
   const StateManager = () => {
     setItemState(!itemState);
   };
 
-  //····················· MODAL  ························//
+  //····················· MODAL ························//
 
     const [modalVisible, setModalVisible] = useState(false); 
     const [itemSelected, setItemSelected] = useState(null);
