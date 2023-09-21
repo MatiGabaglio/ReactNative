@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
       },
       imagen: {
         width: windowWidth * 0.85,
-        height: 200,
+        height: 400,
         resizeMode: 'cover',
         marginBottom: 10,
         borderRadius: 10,

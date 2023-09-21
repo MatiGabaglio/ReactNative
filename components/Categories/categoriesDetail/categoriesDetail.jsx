@@ -4,29 +4,30 @@ import ProductData from '../../../globals/productsData.js';
 import styles from './styles';
 import CategoriesDetailCard from '../categoriesDetailCard/categoriesDetailCard';
 
-const CategoriesDetail = ({categoria}) => {
+const CategoriesDetail = ({ navigation, route }) => {
+  const { nombre } = route.params;
+  const [filteredProducts, setFilteredProducts] = useState([]); 
 
-//  const [products, setProducts] = useState([]);
-  
-//  useEffect(() => {
-//    const filteredProducts = productData.filter(product => product.categoria === categoria);
-//    setProducts(filteredProducts);
-//  }, [categoria]);
+  useEffect(() => {
+    const filtered = ProductData.filter(product => product.categoria === nombre);
+    setFilteredProducts(filtered);
+  }, [nombre]);
 
   return (
-      <View>
-        <FlatList
-          data={ProductData}
-          renderItem={({ item }) => (
-            <CategoriesDetailCard
-              product={item.product}
-              img={item.img}
-              precio={item.precio}
-            />
-          )}
-          keyExtractor={(item, index) => index.toString()}
-        />
-      </View>
+    <View>
+      <FlatList
+        data={filteredProducts}
+        renderItem={({ item }) => (
+          <CategoriesDetailCard
+            product={item.product}
+            img={item.img}
+            precio={item.precio}
+            navigation={navigation}
+          />
+        )}
+        keyExtractor={(item, index) => index.toString()}
+      />
+    </View>
   );
 }
 
