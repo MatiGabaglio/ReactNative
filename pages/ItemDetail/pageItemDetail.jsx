@@ -1,14 +1,19 @@
-import { View } from "react-native"
+import React from "react";
+import { View, TouchableOpacity, Image, Text  } from "react-native"
 import { styles } from './styles.js'; 
-import ProductDetailCard from "../../components/Products/ProductDetailCard/ProductDetailCard.jsx"
 import Header from "../../components/Header/header.jsx"
 
-const PageItemDetail = ({navigation}) => {
+const PageItemDetail = ({route}) => {
+    const { product, img, precio } = route.params;
 
     return (
         <View style ={styles.container} >
             <Header titule={"Productos"}/>
-            <ProductDetailCard />
+            <TouchableOpacity style={styles.card}>
+                <Image source={img} style={styles.imagen}/>
+                <Text style={styles.nombre}>{product}</Text>
+                <Text style={styles.nombre}>{precio}</Text>
+             </TouchableOpacity>
         </View>
     )
 };

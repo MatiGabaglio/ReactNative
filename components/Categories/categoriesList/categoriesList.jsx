@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import { styles } from './styles.js';
 import categorias from '../../../globals/categorieData.js';
 import CategoriesCard from '../categoriesCard/categoriesCard.jsx';
