@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
 import { styles } from './styles.js';
-import categorias from '../../../globals/categorieData.js';
+import categorias from '../../../src/globals/categorieData.js';
 import CategoriesCard from '../categoriesCard/categoriesCard.jsx';
 
 const CategoriesList = ( {navigation} ) => {

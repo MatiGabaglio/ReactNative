@@ -1,10 +1,15 @@
 import React from "react";
-import Home from './pages/Home/home.jsx';
-import { View } from 'react-native';
-import StackNavigation from "./Navigation/StackNavigation.jsx";
+import { store } from "./src/store/index";
+import { Provider } from "react-redux";
+import { NavigationContainer } from "@react-navigation/native";
+import { BottomTabNavigation } from "./src/Navigation/BottomTabNavigation.jsx";
 
 export default function App() {
   return (
-    <StackNavigation />
+    <Provider store={store}>
+      <NavigationContainer>
+        <BottomTabNavigation />
+      </NavigationContainer>
+    </Provider>
   );
 }

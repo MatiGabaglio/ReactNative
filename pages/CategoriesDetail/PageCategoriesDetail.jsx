@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import Header from "../../components/Header/header";
 import CategoriesDetailCard from "../../components/Categories/categoriesDetailCard/categoriesDetailCard";
-import ProductData from "../../globals/productsData";
+import ProductData from "../../src/globals/productsData";
 
 const PageCategoriesDetail = ({ route, navigation }) => {
   const { nombre } = route.params;
