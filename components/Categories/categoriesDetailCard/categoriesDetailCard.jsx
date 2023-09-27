@@ -8,7 +8,10 @@ const CategoriesDetailCard = ({ product, img, precio }) => {
 
   return (
     <View >
-      <TouchableOpacity style={styles.card} onPress={() => navigation.navigate("Product Detail", {product, img, precio})}>
+      <TouchableOpacity style={styles.card} 
+        onPress={() => 
+          navigation.navigate("Product Detail", {product, img, precio})
+        }>
         <Image source={img} style={styles.imagen} />
         <Text style={styles.nombre}>{product}</Text>
         <Text style={styles.nombre}>{precio}</Text>

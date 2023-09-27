@@ -1,12 +1,12 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import Cart from "../../pages/Cart/cart";
+import Cartpage from "../../pages/Cart/Cartpage";
 
 const Stack = createNativeStackNavigator();
 
 function CartNavigation() {
   return (
     <Stack.Navigator >
-      <Stack.Screen name="Cart" component={Cart} />
+      <Stack.Screen name="Cart" component={Cartpage} />
     </Stack.Navigator>
   );
 }

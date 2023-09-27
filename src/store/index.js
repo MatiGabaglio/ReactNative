@@ -1,11 +1,8 @@
-
-/*
-import { configureStore } from '@reduxjs/toolkit'
+import { configureStore  } from '@reduxjs/toolkit'
 import tiendaSlice from '../features/slice'
 
-export default configureStore({
+export const store = configureStore ({
   reducer: {
     tienda: tiendaSlice,
   },
 })
-*/
