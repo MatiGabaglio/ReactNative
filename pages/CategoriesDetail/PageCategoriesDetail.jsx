@@ -2,20 +2,21 @@ import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import Header from "../../components/Header/header";
 import CategoriesDetailCard from "../../components/Categories/categoriesDetailCard/categoriesDetailCard";
-import ProductData from "../../globals/productsData";
+import ProductData from "../../src/globals/productsData";
+import { useSelector } from "react-redux";
 
-const PageCategoriesDetail = ({ route, navigation }) => {
-  const { nombre } = route.params;
+const PageCategoriesDetail = ({ navigation }) => {
+  const categoria = useSelector((state) => state.tienda.categoriaSeleccionada);
   const [filteredProducts, setFilteredProducts] = useState([]);
 
   useEffect(() => {
-    const filtered = ProductData.filter((product) => product.categoria === nombre);
+    const filtered = ProductData.filter((product) => product.categoria === categoria);
     setFilteredProducts(filtered);
-  }, [nombre]);
+  }, [categoria]);
 
   return (
     <View>
-      <Header title={nombre} />
+      <Header title={categoria} />
       <FlatList
         data={filteredProducts}
         renderItem={({ item }) => (
