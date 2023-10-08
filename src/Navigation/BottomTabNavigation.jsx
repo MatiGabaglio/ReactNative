@@ -4,6 +4,7 @@ import StackNavigation from "./StackNavigation";
 import CartNavigation from "./CartNavigation";
 import { StyleSheet } from "react-native";
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import AccountNavigation from "./AccountNavigation";
 
 const BottomTab = createBottomTabNavigator();
 
@@ -32,6 +33,15 @@ function BottomTabNavigation() {
         options={{
           tabBarIcon: ({ color, size }) => (
             <FontAwesome name="shopping-cart" color={color} size={size} />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Cuenta"
+        component={AccountNavigation}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome name="user" color={color} size={size} />
           ),
         }}
       />
