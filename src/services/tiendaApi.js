@@ -11,10 +11,18 @@ export const tiendaApi = createApi({
         getProducts: builder.query({
             query: () => 'products.json',
         }),
+        postOrder: builder.mutation({
+            query: ({...order}) => ({
+                url: 'orders.json',
+                method: 'POST',
+                body: order,
+            }),
+        }),
     }),
 });
 
 export const {
     useGetCategoriesQuery,
     useGetProductsQuery,
+    usePostOrderMutation,
 } = tiendaApi;

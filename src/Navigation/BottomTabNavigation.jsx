@@ -28,7 +28,7 @@ function BottomTabNavigation() {
         }}
       />
       <BottomTab.Screen
-        name="Cart"
+        name="CartTab"
         component={CartNavigation}
         options={{
           tabBarIcon: ({ color, size }) => (
@@ -37,7 +37,7 @@ function BottomTabNavigation() {
         }}
       />
       <BottomTab.Screen
-        name="Cuenta"
+        name="CuentaTab"
         component={AccountNavigation}
         options={{
           tabBarIcon: ({ color, size }) => (

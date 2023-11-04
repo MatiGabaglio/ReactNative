@@ -1,4 +1,3 @@
-
 import { createSlice } from "@reduxjs/toolkit"
 import categorias from "../globals/categorieData.js"
 import ProductData from "../globals/productsData.js"

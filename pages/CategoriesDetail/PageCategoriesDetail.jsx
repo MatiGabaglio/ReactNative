@@ -2,9 +2,8 @@ import React, { useEffect, useState } from "react";
 import { View, FlatList } from "react-native";
 import Header from "../../components/Header/header";
 import CategoriesDetailCard from "../../components/Categories/categoriesDetailCard/categoriesDetailCard";
-import ProductData from "../../src/globals/productsData";
 import { useSelector } from "react-redux";
-import { useGetProductsQuery } from "../../src/store/tiendaApi.js";
+import { useGetProductsQuery } from "../../src/services/tiendaApi.js";
 
 const PageCategoriesDetail = ({ navigation }) => {
   const { data: products } = useGetProductsQuery();

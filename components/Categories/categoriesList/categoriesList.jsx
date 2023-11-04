@@ -2,7 +2,7 @@ import React from 'react';
 import { View, FlatList } from 'react-native';
 import { styles } from './styles.js';
 import CategoriesCard from '../categoriesCard/categoriesCard.jsx';
-import { useGetCategoriesQuery } from '../../../src/store/tiendaApi.js';
+import { useGetCategoriesQuery } from '../../../src/services/tiendaApi.js';
 
 const CategoriesList = ( {navigation} ) => {
   const { data } = useGetCategoriesQuery()
