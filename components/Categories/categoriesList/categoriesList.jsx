@@ -1,15 +1,17 @@
 import React from 'react';
 import { View, FlatList } from 'react-native';
 import { styles } from './styles.js';
-import categorias from '../../../src/globals/categorieData.js';
 import CategoriesCard from '../categoriesCard/categoriesCard.jsx';
+import { useGetCategoriesQuery } from '../../../src/services/tiendaApi.js';
 
 const CategoriesList = ( {navigation} ) => {
+  const { data } = useGetCategoriesQuery()
+
   return (
     <View >
       <View style={styles.container}>
         <FlatList
-          data={categorias}
+          data={data}
           renderItem={({ item }) => (
             <CategoriesCard
               nombre={item.nombre}

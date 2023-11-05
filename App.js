@@ -1,14 +1,14 @@
 import React from "react";
-import { store } from "./src/store/index.js";
+import store from "./src/store/index.js";
 import { Provider } from "react-redux";
+import MainNavigation from "./src/Navigation/MainNavigation.jsx";
 import { NavigationContainer } from "@react-navigation/native";
-import BottomTabNavigation from "./src/Navigation/BottomTabNavigation.jsx";
 
 export default function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <BottomTabNavigation />
+        <MainNavigation />
       </NavigationContainer>
     </Provider>
   );

@@ -12,7 +12,7 @@ const CategoriesDetailCard = ({ product, img, precio }) => {
         onPress={() => 
           navigation.navigate("Product Detail", {product, img, precio})
         }>
-        <Image source={img} style={styles.imagen} />
+        <Image source={{uri: img}} style={styles.imagen} />
         <Text style={styles.nombre}>{product}</Text>
         <Text style={styles.nombre}>{precio}</Text>
       </TouchableOpacity>
